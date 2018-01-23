@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Width Checker</title>
+    <style>
+        p{
+            border-radius:300px;
+            background-color:black;
+            color:red;
+            height:240px;
+            width:300px;
+            margin-top:50px;
+            margin-left:50px;
+            text-align:center;
+            font-size:3em;
+            padding-top:60px;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="width">
+        
+    </p>
+
+    <script>
+
+        window.addEventListener("load", setPixels);
+
+        function setPixels() {
+            circle = document.getElementById("width");
+            width = window.innerWidth;
+            height = window.innerHeight;
+            pixels = width * height;
+            circle.innerHTML = "Pixels = " + pixels;
+        }
+
+ 
+        window.addEventListener("resize", windowWasResized);
+
+        function windowWasResized() {
+            alert("You re-sized the window!");
+            circle = document.getElementById("width");
+            width = window.innerWidth;
+            height = window.innerHeight;
+            pixels = width * height;
+            circle.innerHTML = "Pixels = " + pixels;
+        }
+
+    </script>
+
+</body>
+
+</html>
